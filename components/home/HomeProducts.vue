@@ -8,9 +8,9 @@
             <span>> View All</span>
         </div>
         <div class="flex justify-between">
-            <template v-for="product in products">
+            <template v-for="(product, index) in products">
                 <button
-                    :key="product.label"
+                    :key="index"
                     class="border border-black bg-white hover:bg-gray-400 py-2 w-36"
                 >
                     abc

@@ -1,4 +1,8 @@
+const dotenv = require('dotenv')
+const env = dotenv.config()
+
 export default {
+  env: env.parsed,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'shiseido',

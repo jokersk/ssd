@@ -64,7 +64,7 @@
                 lineup
             </div>
             <div class="grid grid-cols-3 gap-8">
-                <Card v-for="item in items" :key="item.title">
+                <Card v-for="(item, index) in items" :key="index">
                     <span slot="title">
                         {{ item.title }}
                     </span>

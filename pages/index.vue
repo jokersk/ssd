@@ -4,7 +4,7 @@
         <Info title="infomation" :items="infomations" class="-mt-36" />
         <Info :items="infomations">
             <div slot="title" class="text-black">
-              Recommend
+                Recommend
             </div>
         </Info>
         <HomeProducts />
@@ -62,6 +62,22 @@ export default {
                 },
             ],
         }
+    },
+    mounted() {
+        this.fetchData()
+    },
+    methods: {
+        fetchData() {
+            const contentful = require('contentful')
+            const client = contentful.createClient({
+                space: process.env.contentfull_space,
+                accessToken: process.env.contentfull_accessToken,
+            })
+            client
+                .getEntry('5PeGS2SoZGSa4GuiQsigQu')
+                .then((entry) => console.log(entry))
+                .catch((err) => console.log(err))
+        },
     },
 }
 </script>
