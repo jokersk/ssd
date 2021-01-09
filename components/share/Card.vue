@@ -1,6 +1,6 @@
 <template>
     <div class="flex-col">
-        <img class="" src="https://picsum.photos/380/230" alt="">
+        <img class="w-full object-cover" src="https://picsum.photos/380/230" alt="">
         <div class="mt-4 text-left">
             <p class="max-w-full truncate uppercase">
                 <slot name="title">

@@ -2,21 +2,21 @@
     <nav class="bg-black opacity-75 fixed w-full nav-bar z-20" :class="{ pinned: pinned }">
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between py-5">
-                <div class="flex-shrink-0 flex items-center">
+                <nuxt-link to="/" class="flex-shrink-0 flex items-center">
                     <img
                         class="block"
                         src="~/assets/images/logo-white.svg"
                         width="160"
                     />
-                </div>
+                </nuxt-link>
                 <template v-for="(menu, index) in menuRecords">
-                    <a
-                        href="#"
+                    <nuxt-link
+                        :to="menu.to"
                         :key="index"
                         class="border-indigo-500 text-gray-500 inline-flex items-center px-1 pt-1 text-sm font-medium"
                     >
                         {{ menu.name }}
-                    </a>
+                    </nuxt-link>
                 </template>
                 
                 <a
@@ -63,22 +63,28 @@ export default {
             pinned: true,
             menuRecords: [
                 {
-                    name: 'ABOUT'
+                    name: 'ABOUT',
+                    to: '/'
                 },
                 {
-                    name: 'PRODUCTS'
+                    name: 'PRODUCTS',
+                    to: '/products'
                 },
                 {
-                    name: 'TREND & AWARDS'
+                    name: 'TREND & AWARDS',
+                    to: '/'
                 },
                 {
-                    name: 'NEWS'
+                    name: 'NEWS',
+                    to: '/'
                 },
                 {
-                    name: 'For Profressional'
+                    name: 'For Profressional',
+                    to: '/'
                 },
                 {
-                    name: 'For Customer'
+                    name: 'For Customer',
+                    to: '/'
                 }
          ]
         }
