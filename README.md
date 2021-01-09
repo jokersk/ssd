@@ -1,5 +1,3 @@
-# shiseido
-
 ## Build Setup
 
 ```bash
