@@ -9,6 +9,7 @@
         </Info>
         <HomeProducts />
         <HomeTrendAward />
+        <HomeToolContent />
     </div>
 </template>
 
