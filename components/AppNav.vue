@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-black opacity-75 fixed w-full nav-bar" :class="{ pinned: pinned }">
+    <nav class="bg-black opacity-75 fixed w-full nav-bar z-20" :class="{ pinned: pinned }">
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between py-5">
                 <div class="flex-shrink-0 flex items-center">

@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-36">
+    <div>
         <HomeVideo />
         <Info title="infomation" :items="infomations" class="-mt-36" />
         <Info :items="infomations">
@@ -10,6 +10,7 @@
         <HomeProducts />
         <HomeTrendAward />
         <HomeToolContent />
+        <BackToTop />
     </div>
 </template>
 
