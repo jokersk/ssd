@@ -10,8 +10,6 @@
         <HomeProducts />
         <HomeTrendAward />
         <HomeToolContent />
-        <HomeBottom />
-        <BackToTop />
     </div>
 </template>
 

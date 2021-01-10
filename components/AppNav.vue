@@ -173,7 +173,7 @@ export default {
                 },
                 {
                     name: 'For Profressional',
-                    to: '/',
+                    to: '/for-profressional',
                 },
                 {
                     name: 'For Customer',
