@@ -1,84 +1,49 @@
 <template>
-    <!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ]
-  }
-  ```
--->
     <footer class="bg-gray-800" aria-labelledby="footerHeading">
         <h2 id="footerHeading" class="sr-only">Footer</h2>
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <div class="xl:grid xl:grid-cols-4 xl:gap-8">
-                <div>
+        <div class="container mx-auto py-12">
+            <div class="flex flex-col md:flex-row justify-between space-y-10">
+                <div class="flex justify-center items-center">
                     <img
                         class="block"
                         src="~/assets/images/logo-white.svg"
                         width="160"
                     />
                 </div>
-                <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                <div class="grid grid-cols-2 gap-8 xl:col-span-2 lg:ml-10">
                     <div class="md:grid md:grid-cols-2 md:gap-8">
                         <div>
-                            <h3
-                                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
-                            >
-                                Solutions
-                            </h3>
-                            <ul class="mt-4 space-y-4">
+                            <ul class="space-y-4">
                                 <li>
                                     <a
                                         href="#"
                                         class="text-base text-gray-300 hover:text-white"
                                     >
-                                        Marketing
+                                        ABOUT
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
-                                        class="text-base text-gray-300 hover:text-white"
-                                    >
-                                        Analytics
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        PRODUCTS
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
-                                        class="text-base text-gray-300 hover:text-white"
-                                    >
-                                        Commerce
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        TRENDS & AWARDS
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
-                                        class="text-base text-gray-300 hover:text-white"
-                                    >
-                                        Insights
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        NEWS
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="mt-12 md:mt-0">
-                            <h3
-                                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
-                            >
-                                Support
-                            </h3>
-                            <ul class="mt-4 space-y-4">
+                            <ul class="space-y-4">
                                 <li>
                                     <a
                                         href="#"
@@ -119,12 +84,7 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 md:gap-8">
                         <div>
-                            <h3
-                                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
-                            >
-                                Company
-                            </h3>
-                            <ul class="mt-4 space-y-4">
+                            <ul class="space-y-4">
                                 <li>
                                     <a
                                         href="#"
@@ -172,12 +132,7 @@
                             </ul>
                         </div>
                         <div class="mt-12 md:mt-0">
-                            <h3
-                                class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
-                            >
-                                Legal
-                            </h3>
-                            <ul class="mt-4 space-y-4">
+                            <ul class="space-y-4">
                                 <li>
                                     <a
                                         href="#"
@@ -208,11 +163,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-8 xl:mt-0 space-y-4">
+                <div class="md:hidden footer__hr"></div>
+                <div class="space-y-4">
                     <div class="space-y-2">
                         <a
                             href="#"
-                            class="border-b-2 border-transparent flex font-medium hover:border-gray-300 hover:text-gray-700 items-center pt-1 space-x-2 text-gray-500 text-sm"
+                            class="border-b-2 border-transparent flex font-medium hover:text-gray-700 items-center pt-1 space-x-2 text-gray-500 text-sm"
                         >
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <div>
@@ -221,7 +177,7 @@
                         </a>
                         <a
                             href="#"
-                            class="border-b-2 border-transparent flex font-medium hover:border-gray-300 hover:text-gray-700 items-center pt-1 space-x-2 text-gray-500 text-sm"
+                            class="border-b-2 border-transparent flex font-medium hover:text-gray-700 items-center pt-1 space-x-2 text-gray-500 text-sm"
                         >
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <div>
@@ -230,7 +186,7 @@
                         </a>
                         <a
                             href="#"
-                            class="border-b-2 border-transparent flex font-medium hover:border-gray-300 hover:text-gray-700 items-center pt-1 space-x-2 text-gray-500 text-sm"
+                            class="border-b-2 border-transparent flex font-medium hover:text-gray-700 items-center pt-1 space-x-2 text-gray-500 text-sm"
                         >
                             <div class="">
                                 <img
@@ -304,13 +260,22 @@
                     </div>
                 </div>
             </div>
+            <div class="footer__hr mt-8"></div>
             <div
-                class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-center"
+                class="border-gray-700 pt-8 md:flex md:items-center md:justify-center"
             >
-                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                <p class="text-base text-gray-400 md:mt-0 md:order-1">
                     &copy; 2020 Shiseido Co., Ltd. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
 </template>
+<style>
+.footer__hr {
+    @apply bg-white bg-opacity-50;
+    height: 1px;
+    margin-left: calc( -1 * (100vw - 100% ) / 2 );
+    margin-right: calc( -1 * (100vw - 100% ) / 2 );
+}
+</style>
