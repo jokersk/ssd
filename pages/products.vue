@@ -4,7 +4,7 @@
             <div class="text-center">
                 products
             </div>
-            <div class="text-base absolute top-0 right-0 w-full flex justify-end space-x-3">
+            <div class="text-base absolute top-0 right-0 w-full justify-end space-x-3 hidden md:flex">
                 <button class="border w-28 py-1 hover:bg-gray-300 bg-opacity-75 bg-white">
                     All
                 </button>
@@ -12,12 +12,16 @@
                     Customer
                 </button>
             </div>
+            <select name="" id="" class="flex md:hidden text-base absolute right-0 top-0 h-full w-12">
+                <option value="all">All</option>
+                <option value="customer">Customer</option>
+            </select>
         </div>
-        <div class="grid grid-cols-6 gap-4 mt-24 mb-16">
+        <div class="grid grid-flow-col gap-4 mt-24 mb-16 w-full overflow-x-scroll">
             <button
                 v-for="item in 6"
                 :key="item"
-                class="border w-full flex flex-col items-center py-1"
+                class="border flex flex-col items-center py-1 w-40 flex-shrink-0"
             >
                 <span class="uppercase">
                     hair care
@@ -57,7 +61,7 @@
             <div class="flex justify-center uppercase text-2xl font-bold pb-12">
                 lineup
             </div>
-            <div class="grid grid-cols-3 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <Card v-for="(item, index) in items" :key="index">
                     <span slot="title">
                         {{ item.title }}
