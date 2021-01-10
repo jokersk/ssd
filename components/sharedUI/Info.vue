@@ -1,10 +1,10 @@
 <template>
     <div class="text-center text-2xl space-y-6">
-        <div class="text-white uppercase">
-            <slot name="title">
+        <slot name="title">
+            <div class="text-white uppercase">
                 {{ title }}
-            </slot>
-        </div>
+            </div>
+        </slot>
         <div class="flex space-x-8 max-w-full overflow-x-scroll pb-24">
             <Card
                 v-for="(item, index) in items"
@@ -28,7 +28,7 @@
 export default {
     props: {
         foo: {
-            type: String
+            type: String,
         },
         title: {
             type: String,

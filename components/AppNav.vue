@@ -177,7 +177,7 @@ export default {
                 },
                 {
                     name: 'For Customer',
-                    to: '/',
+                    to: '/for-customer',
                 },
             ],
         }
