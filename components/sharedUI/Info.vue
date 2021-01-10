@@ -9,7 +9,7 @@
             <Card
                 v-for="(item, index) in items"
                 :key="index"
-                class="w-1/4"
+                class="w-10/12 md:w-1/4"
             >
                 <span slot="title">
                     {{ item.title }}
@@ -27,6 +27,9 @@
 <script>
 export default {
     props: {
+        foo: {
+            type: String
+        },
         title: {
             type: String,
             default: '',

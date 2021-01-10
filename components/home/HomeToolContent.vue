@@ -5,7 +5,7 @@
                 TOOLS & CONTENTS
             </b>
         </div>
-        <div class="grid grid-cols-2 gap-10">
+        <div class="grid md:grid-cols-2 gap-10">
             <div>
                 <div class="relative">
                     <img

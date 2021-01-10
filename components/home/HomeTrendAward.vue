@@ -3,8 +3,8 @@
         <div class="text-2xl font-bold text-center">
             TREND AWARD
         </div>
-        <div class="grid grid-cols-3 gap-10 w-full">
-            <Card v-for="i in 3" :key="i">
+        <div class="flex md:grid md:grid-cols-3 gap-10 w-full overflow-x-scroll">
+            <Card v-for="i in 3" :key="i" class="w-11/12 max-w-full">
                 <span slot="title" class="font-bold">
                     Ex cupidatat
                 </span>
@@ -18,9 +18,9 @@
             </Card>
         </div>
         <div class="flex justify-center">
-            <button class="border border-black px-36 py-2">
-                > View All
-            </button>
+            <DetailButton>
+                View All
+            </DetailButton>
         </div>
    </div>
 </template>

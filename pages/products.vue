@@ -4,17 +4,11 @@
             <div class="text-center">
                 products
             </div>
-            <div
-                class="text-base absolute top-0 right-0 w-full flex justify-end space-x-3"
-            >
-                <button
-                    class="border w-28 py-1 hover:bg-gray-300 bg-opacity-75 bg-white"
-                >
+            <div class="text-base absolute top-0 right-0 w-full flex justify-end space-x-3">
+                <button class="border w-28 py-1 hover:bg-gray-300 bg-opacity-75 bg-white">
                     All
                 </button>
-                <button
-                    class="border w-28 py-1 hover:bg-gray-300 bg-opacity-75 bg-white"
-                >
+                <button class="border w-28 py-1 hover:bg-gray-300 bg-opacity-75 bg-white">
                     Customer
                 </button>
             </div>
@@ -44,7 +38,7 @@
                 </svg>
             </button>
         </div>
-        <ImageWithText class="text-white">
+        <ImageWithText class="text-white" >
             <img
                 slot="image"
                 src="https://picsum.photos/1200/330"
@@ -54,7 +48,7 @@
             <span slot="title" class="uppercase">
                 Hair care
             </span>
-            <div slot="body" class="">
+            <div slot="body" class="hidden md:block">
                 Deserunt ut duis ut nostrud reprehenderit anim laboris eu ipsum
                 duis id eiusmod nisi. Duis Lorem consequat irure velit. Irure
             </div>

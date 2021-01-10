@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { client } from '@/utils/contentApi.js'
 export default {
     data() {
         return {
@@ -68,14 +69,11 @@ export default {
     },
     methods: {
         fetchData() {
-            const contentful = require('contentful')
-            const client = contentful.createClient({
-                space: process.env.contentfull_space,
-                accessToken: process.env.contentfull_accessToken,
-            })
             client
                 .getEntry('5PeGS2SoZGSa4GuiQsigQu')
-                .then((entry) => console.log(entry))
+                .then((entry) => {
+                   this.infomations = entry 
+                })
                 .catch((err) => console.log(err))
         },
     },
