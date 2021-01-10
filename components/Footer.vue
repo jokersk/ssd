@@ -3,7 +3,7 @@
         <h2 id="footerHeading" class="sr-only">Footer</h2>
         <div class="container mx-auto py-12">
             <div class="flex flex-col md:flex-row justify-between space-y-10">
-                <div class="flex justify-center items-center">
+                <div class="flex justify-center items-start md:pt-10">
                     <img
                         class="block"
                         src="~/assets/images/logo-white.svg"
