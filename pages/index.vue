@@ -1,7 +1,7 @@
 <template>
     <div>
         <HomeVideo />
-        <Info title="infomation" :items="infomations" class="-mt-36" />
+        <Info title="infomation" :items="infomations" class="-mt-36 relative z-10" />
         <Info :items="infomations">
             <div slot="title" class="text-black">
                 Recommend
