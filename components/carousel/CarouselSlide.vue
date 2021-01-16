@@ -3,7 +3,7 @@
         <div class="flex-col">
             <img slot="image" class="w-full object-cover" :src="image" alt="" />
             <div
-                class="text-left space-y-4 py-4 px-8 hidden md:block"
+                class="text-left space-y-4 py-4 px-8 hidden md:block carousel-slide__text"
             >
                 <p class="max-w-full truncate uppercase">
                     {{ type }}

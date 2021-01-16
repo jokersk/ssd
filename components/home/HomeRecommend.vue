@@ -1,10 +1,6 @@
 <template>
-    <div class="pb-12 home-recommend">
-        <swiper
-            class="swiper"
-            ref="mySwiper"
-            :options="swiperOption"
-        >
+    <div class="md:pb-12 home-recommend">
+        <swiper class="swiper" ref="mySwiper" :options="swiperOption">
             <CarouselSlide
                 v-for="(item, itemIndex) in mockDatas"
                 :key="itemIndex"
@@ -18,21 +14,27 @@
                 class="swiper-pagination bottom-0 px-36 swiper-pagination-bullets hidden md:flex"
                 slot="pagination"
             ></div>
-            <div class="swiper-prev hidden md:block" slot="button-prev">
-                <Prev />
-            </div>
-            <div class="swiper-next hidden md:block" slot="button-next">
-                <Next />
-            </div>
+            <CarouselPrev
+                class="hidden md:block md:bottom-24 left-16"
+                slot="button-prev"
+            />
+            <CarouselNext
+                class="hidden md:block md:bottom-24 right-16"
+                slot="button-next"
+            />
         </swiper>
         <div
-            class="pb-10 px-14 relative md:hidden bg-gray-100 -mt-10 pt-20 text-center space-y-6"
+            class="py-10 px-14 relative md:hidden bg-gray-800 text-white text-center space-y-6"
         >
-            <div class="absolute top-1/2 left-4" @click="slidePrev">
-                <Prev />
-            </div>
-            <div class="absolute top-1/2 right-4" @click="slideNext">
-                <Next />
+            <div>
+                <CarouselPrev
+                    class="absolute top-1/2 left-4 md:bottom-24"
+                    @click.native="slidePrev"
+                />
+                <CarouselNext
+                    class="absolute top-1/2 right-4 md:bottom-24"
+                    @click.native="slideNext"
+                />
             </div>
             <p class="max-w-full uppercase">
                 {{ activeContent.type }}
@@ -40,7 +42,7 @@
             <p class="max-w-full text-2xl font-bold">
                 {{ activeContent.title }}
             </p>
-            <p class="max-w-full text-xl text-gray-700 font-semibold">
+            <p class="max-w-full text-xl text-gray-300 font-semibold">
                 {{ activeContent.body }}
             </p>
             <p class="pt-4 text-xl">
@@ -163,6 +165,17 @@ export default {
     background-image: url(~assets/images/bg.jpg);
     .swiper-container {
         overflow: visible;
+        overflow-x: hidden;
+    }
+    .swiper-slide-prev,
+    .swiper-slide-active,
+    .swiper-slide-next {
+        .carousel-slide__text {
+            @apply md:block;
+        }
+    }
+    .carousel-slide__text {
+        @apply hidden;
     }
     .swiper-slide {
         transition: all 0.4s;
@@ -179,12 +192,6 @@ export default {
     .swiper-pagination-custom,
     .swiper-container-horizontal > .swiper-pagination-bullets {
         bottom: 17px;
-    }
-    .swiper-prev {
-        @apply absolute top-2/3 md:top-auto md:bottom-0 z-10 left-24;
-    }
-    .swiper-next {
-        @apply absolute top-2/3 md:top-auto md:bottom-0 z-10 right-24;
     }
 }
 </style>

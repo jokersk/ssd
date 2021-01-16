@@ -21,21 +21,27 @@
                 class="swiper-pagination bottom-0 px-36 swiper-pagination-bullets hidden md:flex"
                 slot="pagination"
             ></div>
-            <div class="swiper-prev hidden md:block" slot="button-prev">
-                <Prev />
-            </div>
-            <div class="swiper-next hidden md:block" slot="button-next">
-                <Next />
-            </div>
+            <CarouselPrev
+                class="hidden md:block top-2/3 md:top-auto md:bottom-0 left-16"
+                slot="button-prev"
+            />
+            <CarouselNext
+                class="hidden md:block top-2/3 md:top-auto md:bottom-0 right-16"
+                slot="button-next"
+            />
         </swiper>
         <div
             class="pb-10 px-14 relative md:hidden bg-gray-100 -mt-10 pt-20 text-center space-y-6"
         >
-            <div class="absolute top-1/2 left-4" @click="slidePrev">
-                <Prev />
-            </div>
-            <div class="absolute top-1/2 right-4" @click="slideNext">
-                <Next />
+            <div>
+                <CarouselPrev
+                    class="absolute top-1/2 left-4 md:bottom-24"
+                    @click.native="slidePrev"
+                />
+                <CarouselNext
+                    class="absolute top-1/2 right-4 md:bottom-24"
+                    @click.native="slideNext"
+                />
             </div>
             <p class="max-w-full uppercase">
                 {{ activeContent.type }}
@@ -187,7 +193,8 @@ export default {
 .home-carousel {
     .swiper-container {
         overflow: visible;
-        @apply pb-0 md:pb-24;
+        overflow-x: hidden;
+        @apply pb-0 md:pb-24 pt-3;
     }
     .swiper-slide {
         transition: all 0.4s;
@@ -204,12 +211,6 @@ export default {
     .swiper-pagination-custom,
     .swiper-container-horizontal > .swiper-pagination-bullets {
         bottom: 17px;
-    }
-    .swiper-prev {
-        @apply absolute top-2/3 md:top-auto md:bottom-0 z-10 left-24;
-    }
-    .swiper-next {
-        @apply absolute top-2/3 md:top-auto md:bottom-0 z-10 right-24;
     }
 }
 </style>

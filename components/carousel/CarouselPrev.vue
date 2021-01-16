@@ -1,23 +1,18 @@
 <template>
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="44"
-        viewBox="0 0 22 44"
+    <div
+        class="swiper-prev absolute z-10"
     >
-        <g
-            id="Group_3462"
-            data-name="Group 3462"
-            transform="translate(22 44) rotate(180)"
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21.976"
+            height="41.366"
+            viewBox="0 0 21.976 41.366"
         >
-            <rect
-                id="Rectangle_4869"
-                data-name="Rectangle 4869"
-                width="22"
-                height="44"
-                fill="none"
-            />
-            <g id="Group_3460" data-name="Group 3460">
+            <g
+                id="Group_3460"
+                data-name="Group 3460"
+                transform="translate(-0.012 -1.317)"
+            >
                 <circle
                     id="Ellipse_28"
                     data-name="Ellipse 28"
@@ -44,6 +39,6 @@
                     fill="#c9c9c9"
                 />
             </g>
-        </g>
-    </svg>
+        </svg>
+    </div>
 </template>
