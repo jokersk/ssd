@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'FuturaStd';
+  font-weight: 400;
+  src: url('../fonts/webfonts/377AE1_1_0.ttf');
+}
+
+
+@font-face {
+  font-family: 'FuturaStd';
+  font-weight: 600;
+  src: url('../fonts/webfonts/377AE1_2_0.ttf');
+}
+
+@font-face {
+  font-family: 'FuturaStd';
+  font-weight: 800;
+  src: url('../fonts/webfonts/377AE1_4_0.ttf');
+}
+
+.text-futura {
+  font-family: FuturaStd;
+}

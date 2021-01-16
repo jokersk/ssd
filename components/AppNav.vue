@@ -55,7 +55,9 @@
                 </button>
             </div>
             <div class="flex justify-between py-5">
-                <div class="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
+                <div
+                    class="flex-1 flex items-center justify-center md:items-stretch md:justify-start"
+                >
                     <nuxt-link to="/" class="flex-shrink-0 flex items-center">
                         <img
                             class="block"
@@ -63,7 +65,9 @@
                             width="160"
                         />
                     </nuxt-link>
-                    <div class="hidden md:flex flex-grow justify-between items-center sm:ml-10">
+                    <div
+                        class="hidden md:flex flex-grow justify-between items-center sm:ml-10"
+                    >
                         <template v-for="(menu, index) in menuRecords">
                             <nuxt-link
                                 :to="menu.to"
@@ -83,18 +87,18 @@
                         class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 items-center px-1 pt-1 border-b-2 text-sm font-medium flex flex-col"
                     >
                         <svg
-                            class="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="23"
+                            viewBox="0 0 28 23"
                         >
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            ></path>
+                                id="Color_Overlay"
+                                data-name="Color Overlay"
+                                d="M1185.077,69A1.062,1.062,0,0,1,1184,67.954V47.046A1.062,1.062,0,0,1,1185.077,46h25.846A1.061,1.061,0,0,1,1212,47.046V67.954A1.061,1.061,0,0,1,1210.923,69Zm.722-1.809h24.4V47.809h-24.4Zm20.057-2.679-3.233-3.138a1.023,1.023,0,0,1,0-1.479,1.1,1.1,0,0,1,1.523,0l3.233,3.138a1.023,1.023,0,0,1,0,1.479,1.1,1.1,0,0,1-1.523,0Zm-17.23,0a1.023,1.023,0,0,1,0-1.479l3.229-3.135a1.1,1.1,0,0,1,1.523,0,1.022,1.022,0,0,1,0,1.478l-3.229,3.136a1.1,1.1,0,0,1-1.523,0Zm8.614-4.182-8.615-8.364a1.022,1.022,0,0,1,0-1.478,1.1,1.1,0,0,1,1.523,0L1198,58.113l7.854-7.625a1.1,1.1,0,0,1,1.523,0,1.022,1.022,0,0,1,0,1.478l-8.616,8.364a1.1,1.1,0,0,1-1.523,0Z"
+                                transform="translate(-1184 -46)"
+                                fill="#fff"
+                            />
                         </svg>
                         <div class="hidden lg:block">
                             CONTACT

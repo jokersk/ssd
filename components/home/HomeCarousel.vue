@@ -1,0 +1,215 @@
+<template>
+    <div class="pb-12 md:pb-24 home-carousel">
+        <swiper
+            class="swiper"
+            ref="mySwiper"
+            :options="swiperOption"
+            @progress="transitionStart"
+            @transitionEnd="transitionEnd"
+        >
+            <CarouselSlide
+                v-for="(item, itemIndex) in mockDatas"
+                :key="itemIndex"
+                class="transform"
+                :image="item.image"
+                :title="item.title"
+                :body="item.body"
+                :date="item.date"
+            />
+
+            <div
+                class="swiper-pagination bottom-0 px-36 swiper-pagination-bullets hidden md:flex"
+                slot="pagination"
+            ></div>
+            <div class="swiper-prev hidden md:block" slot="button-prev">
+                <Prev />
+            </div>
+            <div class="swiper-next hidden md:block" slot="button-next">
+                <Next />
+            </div>
+        </swiper>
+        <div
+            class="pb-10 px-14 relative md:hidden bg-gray-100 -mt-10 pt-20 text-center space-y-6"
+        >
+            <div class="absolute top-1/2 left-4" @click="slidePrev">
+                <Prev />
+            </div>
+            <div class="absolute top-1/2 right-4" @click="slideNext">
+                <Next />
+            </div>
+            <p class="max-w-full uppercase">
+                {{ activeContent.type }}
+            </p>
+            <p class="max-w-full text-2xl font-bold">
+                {{ activeContent.title }}
+            </p>
+            <p class="max-w-full text-xl text-gray-700 font-semibold">
+                {{ activeContent.body }}
+            </p>
+            <p class="pt-4 text-xl">
+                {{ activeContent.date }}
+            </p>
+        </div>
+    </div>
+</template>
+<script>
+import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+export default {
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    directives: {
+        swiper: directive,
+    },
+    computed: {
+        swiper() {
+            return this.$refs.mySwiper.$swiper
+        },
+    },
+    data() {
+        return {
+            firstSwiper: null,
+            swiperOption: {
+                centeredSlides: true,
+                init: false,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.5,
+                    },
+                    768: {
+                        slidesPerView: 3.5,
+                    },
+                },
+                slidesPerView: 1.5,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    renderBullet(index, className) {
+                        return `<span class="${className} swiper-pagination-bullet-custom"></span>`
+                    },
+                },
+                navigation: {
+                    nextEl: '.swiper-next',
+                    prevEl: '.swiper-prev',
+                },
+            },
+            activeContent: {
+                type: 'NEWS',
+                title: 'E - LEARNING',
+                body:
+                    'Our video tutorials are created with step-by-step instructions so you can follow each step and upgrade… ',
+                date: '2021.1.5',
+            },
+            mockDatas: [
+                {
+                    image:
+                        'https://images.ctfassets.net/qf666eyypqhw/4ygbwtk5Xe142Gz5sVUt52/cd6acf9fa3652b0039d43192fab26333/BI21_TOP_KV.jpg?h=1400&w=2100',
+                    type: 'NEWS',
+                    title: 'E - LEARNING',
+                    body:
+                        'Our video tutorials are created with step-by-step instructions so you can follow each step and upgrade… ',
+                    date: '2021.1.5',
+                },
+                {
+                    image:
+                        'https://images.ctfassets.net/qf666eyypqhw/73WztEXOSVRTK80A7Zv1cs/4ff816e91751eb456bb13108d42a63c0/BS21SS_TOP_KV.jpg?h=1400&w=2100',
+                    type: 'NEWS',
+                    title: '#DESIGN YOURSELF',
+                    body:
+                        'The right perm design can bring you multiple looks that you can enjoy day by day.It is up to you to make your…  ',
+                    date: '2021.1.5',
+                },
+                {
+                    image:
+                        'https://images.ctfassets.net/qf666eyypqhw/3ZuPnafmaWgTaayvw03qKG/dea66293de4987413c0f9c3531a58d98/DaB_Kawaragi_Main_page.jpg?h=1400&w=2100',
+                    type: 'NEWS',
+                    title: 'BEAUTY CREATORS TALK',
+                    body:
+                        '10 Questions To Your Favorite Hair Stylists.Discovering the lifestory of Top Beauty Creators.They are challenged…',
+                    date: '2021.1.5',
+                },
+                {
+                    image:
+                        'https://images.ctfassets.net/qf666eyypqhw/1R7dKCl6aNvnkoTbKJwNnv/e2d93161c2c10db6fb60274d41856404/Beauty_Creators_Community.jpg?h=1400&w=2100',
+                    type: 'NEWS',
+                    title: '#DESIGN YOURSELF',
+                    body:
+                        'The right perm design can bring you multiple looks that you can enjoy day by day.It is up to you to make your…  ',
+                    date: '2021.1.5',
+                },
+                {
+                    image:
+                        'https://images.ctfassets.net/qf666eyypqhw/4BLdb37wm1yowwk34iSkj/83565fb609ec560abdc39ddaf4ef9d89/salonrecycl_KV.jpg?h=1400&w=2100',
+                    type: 'NEWS',
+                    title: 'BEAUTY CREATORS TALK',
+                    body:
+                        '10 Questions To Your Favorite Hair Stylists.Discovering the lifestory of Top Beauty Creators.They are challenged…',
+                    date: '2021.1.5',
+                },
+            ],
+        }
+    },
+    methods: {
+        transitionStart() {},
+        transitionEnd(e) {},
+        positionSlide() {
+            const lists = document.querySelectorAll(
+                '.swiper-wrapper .swiper-slide'
+            )
+            lists.forEach((element) => {
+                element.classList.remove('translate-y-4', '-translate-y-4')
+            })
+            const prev = lists[this.swiper.activeIndex - 1]
+            const next = lists[this.swiper.activeIndex + 1]
+            prev.classList.add('translate-y-4')
+            next.classList.add('-translate-y-4')
+        },
+        slidePrev() {
+            this.swiper.slidePrev()
+        },
+        slideNext() {
+            this.swiper.slideNext()
+        },
+    },
+    mounted() {
+        this.swiper.on('slideChange', (e) => {
+            this.positionSlide()
+            this.activeContent = this.mockDatas[this.swiper.realIndex]
+        })
+        this.swiper.init()
+    },
+}
+</script>
+<style lang="scss">
+.home-carousel {
+    .swiper-container {
+        overflow: visible;
+        @apply pb-0 md:pb-24;
+    }
+    .swiper-slide {
+        transition: all 0.4s;
+    }
+    .swiper-pagination-bullet-custom {
+        @apply h-1 bg-black rounded-none my-0 mx-0 flex-grow;
+    }
+    .swiper-container-horizontal
+        > .swiper-pagination-bullets
+        .swiper-pagination-bullet {
+        @apply mx-0;
+    }
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 17px;
+    }
+    .swiper-prev {
+        @apply absolute top-2/3 md:top-auto md:bottom-0 z-10 left-24;
+    }
+    .swiper-next {
+        @apply absolute top-2/3 md:top-auto md:bottom-0 z-10 right-24;
+    }
+}
+</style>

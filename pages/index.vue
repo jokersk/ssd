@@ -1,7 +1,9 @@
 <template>
     <div>
-        <HomeVideo />
-        <Info title="infomation" :items="infomations" class="-mt-36 relative z-10" />
+        <!-- <HomeVideo /> -->
+        <div style="height: 800px"></div>
+        <HomeCarousel class="-mt-36" />
+        <HomeRecommend />
         <Info :items="infomations">
             <div slot="title" class="text-black">
                 Recommend
