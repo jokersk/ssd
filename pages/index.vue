@@ -1,14 +1,8 @@
 <template>
     <div>
-        <!-- <HomeVideo /> -->
-        <div style="height: 800px"></div>
+        <HomeVideo />
         <HomeCarousel class="-mt-36" />
         <HomeRecommend />
-        <Info :items="infomations">
-            <div slot="title" class="text-black">
-                Recommend
-            </div>
-        </Info>
         <HomeProducts />
         <HomeTrendAward />
         <HomeToolContent />

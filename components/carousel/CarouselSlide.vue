@@ -1,9 +1,10 @@
 <template>
     <swiper-slide class="transform">
         <div class="flex-col">
-            <img slot="image" class="w-full object-cover" :src="image" alt="" />
+            <img slot="image" class="w-full " :src="image" alt="" />
             <div
                 class="text-left space-y-4 py-4 px-8 hidden md:block carousel-slide__text"
+                :class="textSectionStyle"
             >
                 <p class="max-w-full truncate uppercase">
                     {{ type }}
@@ -27,6 +28,6 @@ export default {
     components: {
         SwiperSlide,
     },
-    props: ['title', 'body', 'type', 'date', 'image'],
+    props: ['title', 'body', 'type', 'date', 'image', 'textSectionStyle'],
 }
 </script>

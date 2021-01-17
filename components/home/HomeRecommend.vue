@@ -5,6 +5,7 @@
                 v-for="(item, itemIndex) in mockDatas"
                 :key="itemIndex"
                 class="transform text-white"
+                textSectionStyle="py-8"
                 :image="item.image"
                 :title="item.title"
                 :body="item.body"
@@ -98,7 +99,7 @@ export default {
             mockDatas: [
                 {
                     image:
-                        'https://images.ctfassets.net/qf666eyypqhw/4ygbwtk5Xe142Gz5sVUt52/cd6acf9fa3652b0039d43192fab26333/BI21_TOP_KV.jpg?h=1400&w=2100',
+                        'https://ssd-iamthecodeman.s3.amazonaws.com/images/Set.jpg',
                     type: 'NEWS',
                     title: 'E - LEARNING',
                     body:
@@ -107,7 +108,7 @@ export default {
                 },
                 {
                     image:
-                        'https://images.ctfassets.net/qf666eyypqhw/73WztEXOSVRTK80A7Zv1cs/4ff816e91751eb456bb13108d42a63c0/BS21SS_TOP_KV.jpg?h=1400&w=2100',
+                        'https://ssd-iamthecodeman.s3.amazonaws.com/images/set1.jpg',
                     type: 'NEWS',
                     title: '#DESIGN YOURSELF',
                     body:
@@ -116,7 +117,7 @@ export default {
                 },
                 {
                     image:
-                        'https://images.ctfassets.net/qf666eyypqhw/3ZuPnafmaWgTaayvw03qKG/dea66293de4987413c0f9c3531a58d98/DaB_Kawaragi_Main_page.jpg?h=1400&w=2100',
+                        'https://ssd-iamthecodeman.s3.amazonaws.com/images/set2.jpg',
                     type: 'NEWS',
                     title: 'BEAUTY CREATORS TALK',
                     body:
@@ -125,7 +126,7 @@ export default {
                 },
                 {
                     image:
-                        'https://images.ctfassets.net/qf666eyypqhw/1R7dKCl6aNvnkoTbKJwNnv/e2d93161c2c10db6fb60274d41856404/Beauty_Creators_Community.jpg?h=1400&w=2100',
+                        'https://ssd-iamthecodeman.s3.amazonaws.com/images/set3.jpg',
                     type: 'NEWS',
                     title: '#DESIGN YOURSELF',
                     body:
@@ -134,7 +135,7 @@ export default {
                 },
                 {
                     image:
-                        'https://images.ctfassets.net/qf666eyypqhw/4BLdb37wm1yowwk34iSkj/83565fb609ec560abdc39ddaf4ef9d89/salonrecycl_KV.jpg?h=1400&w=2100',
+                        'https://ssd-iamthecodeman.s3.amazonaws.com/images/set4.jpg',
                     type: 'NEWS',
                     title: 'BEAUTY CREATORS TALK',
                     body:
@@ -163,6 +164,7 @@ export default {
 <style lang="scss">
 .home-recommend {
     background-image: url(~assets/images/bg.jpg);
+    background-position: 50% 160px;
     .swiper-container {
         overflow: visible;
         overflow-x: hidden;

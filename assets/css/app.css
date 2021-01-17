@@ -20,3 +20,8 @@
 .text-futura {
   font-family: FuturaStd;
 }
+
+.ignore-width {
+  margin-left: calc((100vw - 100%) / 2 * -1);
+  margin-right: calc((100vw - 100%) / 2 * -1);
+}
