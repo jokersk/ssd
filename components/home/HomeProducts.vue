@@ -1,18 +1,8 @@
 <template>
     <div class="md:p-10 relative">
-        <div class="flex justify-center pb-12 flex-col md:flex-row pt-8">
-            <div class="text-center">
-                <b class="uppercase text-2xl">
-                    Products
-                </b>
-            </div>
-            <div
-                class="text-right md:absolute md:right-0 pr-10 flex justify-center items-center"
-            >
-                <div>VIEW ALL</div>
-                <IconNext class="h-6" />
-            </div>
-        </div>
+        <Titletail>
+            Products
+        </Titletail>
         <div class="border-b ignore-width">
             <div
                 class="flex justify-around items-center overflow-x-scroll w-2/3 mx-auto"
