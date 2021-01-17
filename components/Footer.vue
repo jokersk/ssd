@@ -32,7 +32,7 @@
                                 <div>
                                     {{ row.label }}
                                 </div>
-                                <component :is="row.icon" class="w-5" />
+                                <component :is="row.icon" class="w-5 fill-current" />
                             </div>
                         </div>
                     </div>

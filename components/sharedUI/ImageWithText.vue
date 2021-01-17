@@ -24,9 +24,7 @@
                     </slot>
                 </span>
                 <slot name="button">
-                    <DetailButton bg="bg-transparent">
-                        Detail
-                    </DetailButton>
+                    <ButtonNext /> 
                 </slot>
             </div>
         </div>

@@ -170,6 +170,7 @@ export default {
             })
             const prev = lists[this.swiper.activeIndex - 1]
             const next = lists[this.swiper.activeIndex + 1]
+            console.log(prev)
             prev.classList.add('translate-y-4')
             next.classList.add('-translate-y-4')
         },
@@ -184,6 +185,9 @@ export default {
         this.swiper.on('slideChange', (e) => {
             this.positionSlide()
             this.activeContent = this.mockDatas[this.swiper.realIndex]
+        })
+        this.swiper.on('init', () => {
+            this.positionSlide()
         })
         this.swiper.init()
     },
