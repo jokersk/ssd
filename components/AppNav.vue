@@ -156,7 +156,7 @@ export default {
                 },
                 {
                     name: 'TREND & AWARDS',
-                    to: '/',
+                    to: '/line',
                 },
                 {
                     name: 'NEWS',

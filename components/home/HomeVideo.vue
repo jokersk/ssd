@@ -2,7 +2,7 @@
     <div
         class="homeVideo bg-gray-600 flex justify-center items-center relative"
     >
-        <!-- <iframe
+        <iframe
             class="w-full h-full relative top-0 left-0 object-cover"
             width="560"
             height="315"
@@ -10,12 +10,12 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
             allowfullscreen
-        ></iframe> -->
-        <img
+        ></iframe>
+        <!-- <img
             src="~/assets/images/bg.jpg"
             class="w-full h-full relative top-0 left-0 object-cover"
             alt=""
-        />
+        /> -->
 
         <div
             class="w-11/12 md:w-1/3 flex-col text-white space-y-4 text-center absolute z-10"
